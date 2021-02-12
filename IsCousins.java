@@ -31,7 +31,7 @@ class Solution {
         System.out.println(left);
         System.out.println(right);
         if (right == left && right > 0){
-            if ((root.left.val == x && root.right.val == y) || (root.left.val == y &&                        root.right.val == x)) {
+            if ((root.left.val == x && root.right.val == y) || (root.left.val == y && root.right.val == x)) {
                 return -1;
             } else {
                 return right;

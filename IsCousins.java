@@ -8,7 +8,9 @@ class Solution {
     }
     
     // returns an integer representing the height of the nodes containing the given x or y found in the given tree
-    // If the two nodes are not found or the parent of the are the same, returns -1. 
+    // If the two nodes are not found or the parent of the nodes are the same, returns -1. 
+    // Time Complexity: O(n)
+    // Space Complexity: O(n)
     // @param root - given tree that is searched through
     // @param level - the height of the current root
     private int isCousins(TreeNode root, int x, int y, int level) {
@@ -27,7 +29,7 @@ class Solution {
             }
         } else if (left > 0 && right < 0 || right > 0 && left < 0) { 
             // keeps returning the value found if one is greater than zero and the other is less than zero. 
-            // this is because when this happens, either the heighs of two nodes have not been compared yet or already finished comparing
+            // this is because when this happens, either the heights of two nodes have not been compared yet or already finished comparing
             return Math.max(left, right);
         } else {
             // returns -1 when both left and right heights are negative

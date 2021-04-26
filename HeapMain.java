@@ -3,7 +3,7 @@
 
 public class HeapMain {
     public static void main(String[] args) {
-    	HeapPriorityQueue<Integer> pq = new HeapPriorityQueue<>();
+    	MaxHeap<Integer> pq = new MaxHeap<>();
         Integer[] elements = {65, 50, 20, 90, 44, 60, 80, 70, 99, 10};
         for (int n : elements) {
             pq.add(n);
@@ -17,7 +17,7 @@ public class HeapMain {
         }
         
         System.out.println("==================================================================");
-        HeapPriorityQueue<String> strPq = new HeapPriorityQueue<>();
+        MaxHeap<String> strPq = new MaxHeap<>();
         String[] strElements = {"Alex", "Greg", "Kelvin", "Maggie", "Eric", "Bob", "Zach", "Jake", "Barb", "Zilo", "Barb", "Chelsea"};
         for (String s : strElements) {
         	strPq.add(s);

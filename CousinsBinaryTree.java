@@ -18,7 +18,8 @@ public class CousinsBinaryTree {
             this.right = right;
         }
     }
-
+    
+    
     /**
      * Determines whether the nodes x and y are cousins - have the same height and
      * different parent nodes
@@ -42,14 +43,14 @@ public class CousinsBinaryTree {
     /**
      * Time Complexity: O()
      * Space Complexity: O(n)
-     * Helper method for cousins - recursively keeps track of height and parent node
+     * Helper method for cousins - updates the height and parent node
      * 
-     * @param root 
-     * @param valLoc
-     * @param val
-     * @param height
+     * @param root root of the given tree
+     * @param valLoc location of the value; has value and height
+     * @param val value of the node we are searching for
+     * @param height height of the current node
      */
-    public static void helper(TreeNode root, int[] valLoc, int val, int height) {
+    public void helper(TreeNode root, int[] valLoc, int val, int height) {
         if (root == null) {
             return;
         }

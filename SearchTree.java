@@ -1,5 +1,4 @@
-import java.util.Queue;
-import java.util.LinkedList;
+import java.util.*;
 //importSearchTreeNode;
 
 // Class SearchTree stores and prints a binary search tree of
@@ -164,4 +163,25 @@ public class SearchTree<E extends Comparable<E>> {
         }
 		
 	}
+
+    /*
+        Time Complexity: O(n)
+        Space Complexity: O(n)
+
+        We all collaborated on this method, nobody did one distinct part
+    */
+    public void dfsIter() {
+        Deque<SearchTreeNode<E>> stack = new ArrayDeque<>();
+        SearchTreeNode<E> n = overallRoot;
+        while(!stack.isEmpty() || n != null) {
+            if (n != null) {
+                stack.push(n);
+                n = n.left;
+            } else {
+                n = stack.pop();
+                System.out.print(n.data + " ");
+                n = n.right;
+            }
+        }
+    }
 }

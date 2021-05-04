@@ -17,5 +17,9 @@ public class SearchTreeClient {
         System.out.println();
         System.out.println("Level order traversal: ");
         numbers.printByLevel();
+
+        System.out.println();
+        System.out.println("In-order traversal: ");
+        numbers.dfsIter();
     }
 }
